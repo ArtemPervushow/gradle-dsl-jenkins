@@ -50,6 +50,6 @@ GradleJobBuilder builder = new GradleJobBuilder(
                                 gitUrl:"https://github.com/ArtemPervushow/gradle-dsl-jenkins.git",
                                 gitBranch:"master",
                                 gradleTasks:"build",
-                                credentialsId:"cacc3e70-7103-4613-b74b-eaa04c825483"
+                                credentialsId:"cacc3e70-7103-4613-b74b-eaa04c825483")
 
 builder.build(this)
