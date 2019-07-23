@@ -19,12 +19,14 @@ class GradleJobBuilder {
                 numToKeep 5
             }
             scm {
-                remote {
-                    name('origin')
-                    url(this.gitUrl)
-                    credentials(this.credentialsId)
+                git {
+                    remote {
+                        name('origin')
+                        url(this.gitUrl)
+                        credentials(this.credentialsId)
+                    }
+                    branch(this.gitBranch)
                 }
-                branch(this.gitBranch)
             }
             triggers {
                 scm '@daily'
