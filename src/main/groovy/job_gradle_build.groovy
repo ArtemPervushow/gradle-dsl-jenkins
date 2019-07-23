@@ -44,12 +44,12 @@ folder("Gradle-sample-dsl"){
     description 'This is folder for gradle build'
 }
 
-GradleJobBuilder builder = new GradleJobBuilder()
-                                .jobName("Gradle build tasks")
-                                .description("This is gradle job tasks")
-                                .gitUrl("https://github.com/ArtemPervushow/gradle-dsl-jenkins.git")
-                                .gitBranch("master")
-                                .gradleTasks("build")
-                                .credentialsId("cacc3e70-7103-4613-b74b-eaa04c825483")
+GradleJobBuilder builder = new GradleJobBuilder(
+                                jobName:"Gradle build tasks",
+                                description:"This is gradle job tasks",
+                                gitUrl:"https://github.com/ArtemPervushow/gradle-dsl-jenkins.git",
+                                gitBranch:"master",
+                                gradleTasks:"build",
+                                credentialsId:"cacc3e70-7103-4613-b74b-eaa04c825483"
 
 builder.build(this)
